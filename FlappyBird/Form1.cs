@@ -13,7 +13,7 @@ namespace FlappyBird
     public partial class Form1 : Form
     {
         int pipeSpeed = 8;
-        int gravity = 5;
+        int gravity = 10;
         int score = 0;
 
        
@@ -25,23 +25,36 @@ namespace FlappyBird
         private void gameTimerEvent(object sender, EventArgs e)
         {
             flappyBird.Top += gravity;
-      
 
+            pipeBottom.Left -= pipeSpeed; // Di chuyển 2 cột trên, cột dưới về phía bên trái
+            pipeTop.Left -= pipeSpeed;
+            scoreText.Text = "Score: " + score; // Tính tổng số điểm
+
+            if (pipeBottom.Left < -50) // Tạo cột trên xuất hiện liên tục 
+            {
+                pipeBottom.Left = 500;
+                score++; //điểm +1 khi qua cột trên
+            }
+            if (pipeTop.Left < -80) // Tạo cột trên xuất hiện liên tục 
+            {
+                pipeTop.Left = 650;
+                score++; //điểm +1 khi qua cột dưới
+            }
         }
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Space)
+            if(e.KeyCode == Keys.Space) // Khi dùng phím SPACE sẽ giúp chim bay lên
             {
-                gravity = -7;
+                gravity = -10;
             }
         }
 
         private void gamekeyisup(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Space) // Khi không nhấn hoặc giữ phím SPACE chim sẽ bay xuống
             {
-                gravity = 7;
+                gravity = 10;
             }
         }
 
