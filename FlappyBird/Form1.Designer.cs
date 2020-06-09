@@ -35,18 +35,22 @@
             this.ground = new System.Windows.Forms.PictureBox();
             this.scoreText = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.start = new System.Windows.Forms.ToolStripMenuItem();
+            this.cachChoi = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pipeTop
             // 
             this.pipeTop.Image = global::FlappyBird.Properties.Resources.pipedown;
-            this.pipeTop.Location = new System.Drawing.Point(866, -36);
+            this.pipeTop.Location = new System.Drawing.Point(863, 21);
             this.pipeTop.Name = "pipeTop";
-            this.pipeTop.Size = new System.Drawing.Size(95, 225);
+            this.pipeTop.Size = new System.Drawing.Size(95, 164);
             this.pipeTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pipeTop.TabIndex = 0;
             this.pipeTop.TabStop = false;
@@ -98,17 +102,46 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.start,
+            this.cachChoi});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(592, 28);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // start
+            // 
+            this.start.BackColor = System.Drawing.SystemColors.Control;
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(54, 24);
+            this.start.Text = "Start";
+            this.start.Click += new System.EventHandler(this.start_Click);
+            // 
+            // cachChoi
+            // 
+            this.cachChoi.Name = "cachChoi";
+            this.cachChoi.Size = new System.Drawing.Size(87, 24);
+            this.cachChoi.Text = "Cách chơi";
+            this.cachChoi.Click += new System.EventHandler(this.cachChoi_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(649, 707);
+            this.ClientSize = new System.Drawing.Size(592, 707);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.ground);
             this.Controls.Add(this.pipeBottom);
             this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.pipeTop);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = " Flappy Bird 2020";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gamekeyisdown);
@@ -117,6 +150,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +165,9 @@
         private System.Windows.Forms.PictureBox ground;
         private System.Windows.Forms.Label scoreText;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem start;
+        private System.Windows.Forms.ToolStripMenuItem cachChoi;
     }
 }
 

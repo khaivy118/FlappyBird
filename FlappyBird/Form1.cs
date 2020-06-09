@@ -12,8 +12,8 @@ namespace FlappyBird
 {
     public partial class Form1 : Form
     {
-        int pipeSpeed = 8;
-        int gravity = 10;
+        int pipeSpeed =0;
+        int gravity = 0;
         int score = 0;
 
        
@@ -40,6 +40,18 @@ namespace FlappyBird
                 pipeTop.Left = 650;
                 score++; //điểm +1 khi qua cột dưới
             }
+
+            if (score > 5) // Khi được 5 điểm, độ khó tăng dần
+            {
+                pipeSpeed = 12; 
+            }
+
+            if (flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) ||
+                flappyBird.Bounds.IntersectsWith(ground.Bounds) ||
+                flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) || flappyBird.Top < -25) // Điều kiện để kết thúc game: khi chạm cột trên, dưới, vùng trời, mặt đất.
+            {
+                endGame(); //Kết thúc game
+            }
         }
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
@@ -58,8 +70,24 @@ namespace FlappyBird
             }
         }
 
-        
+        private void endGame() // Tạo chức năng kết thúc game
+        {
+            gameTimer.Stop();
+            scoreText.Text += " Game Over!"; // Hiện chữ "Game over!"
+        }
 
-        
+        private void cachChoi_Click(object sender, EventArgs e) //Tạo hướng dẫn cách chơi
+        {
+            MessageBox.Show(@"- Sử dụng phím 'SPACE' để điều khiển chú chim. 
+- Tránh các chướng ngại vật và không chạm vùng trời, mặt đất", "Cách chơi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void start_Click(object sender, EventArgs e) // Tạo chức năng bắt đầu chơi
+        {
+            pipeSpeed = 8;
+            gravity = 10;
+
+        }
+
     }
 }

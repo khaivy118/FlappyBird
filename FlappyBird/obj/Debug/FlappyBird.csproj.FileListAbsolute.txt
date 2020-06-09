@@ -20,7 +20,6 @@ C:\Users\HP\OneDrive\GitFlappyBird\FlappyBird\FlappyBird\obj\Debug\FlappyBird.pd
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe.config
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\bin\Debug\FlappyBird.pdb
-C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csprojAssemblyReference.cache
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.Form1.resources
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.Properties.Resources.resources
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.GenerateResource.cache
