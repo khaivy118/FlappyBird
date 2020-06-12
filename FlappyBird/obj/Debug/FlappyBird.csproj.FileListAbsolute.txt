@@ -26,3 +26,4 @@ C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBi
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.CoreCompileInputs.cache
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.exe
 C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.pdb
+C:\Users\HP\OneDrive\BTL_KiemThuPhanMem\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csprojAssemblyReference.cache

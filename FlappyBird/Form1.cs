@@ -44,7 +44,7 @@ namespace FlappyBird
             if (score > 5) // Khi được 5 điểm, độ khó tăng dần
             {
                 pipeSpeed = 11;
-               
+
             }
 
             if (flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) ||
@@ -57,9 +57,10 @@ namespace FlappyBird
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Space) // Khi dùng phím SPACE sẽ giúp chim bay lên
+            if (e.KeyCode == Keys.Space) // Khi dùng phím SPACE sẽ giúp chim bay lên
             {
-                gravity = -8;
+                if (score <= 5) { gravity = -7; }
+                else { gravity = -9; }
             }
         }
 
@@ -67,7 +68,8 @@ namespace FlappyBird
         {
             if (e.KeyCode == Keys.Space) // Khi không nhấn hoặc giữ phím SPACE chim sẽ bay xuống
             {
-                gravity = 8;
+                if (score <= 5) { gravity = 7; }
+                else { gravity = 9; }
             }
         }
 
