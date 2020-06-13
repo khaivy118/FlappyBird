@@ -49,7 +49,7 @@ namespace FlappyBird
 
             if (flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) ||
                 flappyBird.Bounds.IntersectsWith(ground.Bounds) ||
-                flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) || flappyBird.Top < -25) // Điều kiện để kết thúc game: khi chạm cột trên, dưới, vùng trời, mặt đất.
+                flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) || flappyBird.Bounds.IntersectsWith(menuGame.Bounds)) // Điều kiện để kết thúc game: khi chạm cột trên, dưới, vùng trời, mặt đất.
             {
                 endGame(); //Kết thúc game
             }
