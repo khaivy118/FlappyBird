@@ -55,7 +55,7 @@ namespace FlappyBird
             }
         }
 
-        private void gamekeyisdown(object sender, KeyEventArgs e)
+        private void gamekeyisdown(object sender, KeyEventArgs e) //Chức năng điều khiển "Space"
         {
             if (e.KeyCode == Keys.Space) // Khi dùng phím SPACE sẽ giúp chim bay lên
             {
@@ -63,8 +63,7 @@ namespace FlappyBird
                 else { gravity = -9; }
             }
         }
-
-        private void gamekeyisup(object sender, KeyEventArgs e)
+        private void gamekeyisup(object sender, KeyEventArgs e) //Chức năng điều khiển "Space"
         {
             if (e.KeyCode == Keys.Space) // Khi không nhấn hoặc giữ phím SPACE chim sẽ bay xuống
             {
